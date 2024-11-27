@@ -1,0 +1,233 @@
+
+
+/* Container for the tables */
+.bus-timings-container {
+  display: flex;
+  gap: 20px; /* Space between the tables */
+  justify-content: center; /* Center the tables */
+  flex-wrap: wrap; /* Make the layout responsive */
+  margin: 20px 0;
+}
+
+/* Each table-like div */
+.bus-timing {
+  flex: 1 1 45%; /* Make the tables take equal space */
+  background-color: #f9f9f9;/* Light background for better contrast */
+  border: 1px solid #ccc; /* Table border */
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #007bff; /* Table header background */
+  color: white; /* Header text color */
+  font-weight: bold;
+}
+
+td {
+  color: #333;
+
+}
+td:hover{
+  color: #333;
+  background-color:rgb(255, 255, 255);
+  font-weight: 600;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bus-timing {
+    flex: 1 1 100%; /* Full-width tables on smaller screens */
+  }
+}
+
+
+.banner {
+  position: relative;
+  width: 100%; /* Adjust as per your layout */
+  overflow: hidden; /* Ensures no content overflows */
+  background-color: black;
+}
+
+.banner img {
+  width: 90%; /* Makes the image responsive */
+  
+  margin-left: 5%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth sinking effect */
+}
+
+.banner:hover img {
+  transform: scale(0.95); /* Slightly reduces size to create sinking effect */
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5); /* Creates an inset shadow for depth */
+}
+
+ .bus-Heading{
+  
+  text-align: center;
+  color: #f02f2f;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-top: 50px;
+  
+} 
+.heading-bus{
+  font-size: 50px;
+  font-weight: 900;
+}
+
+
+
+.bus-caption{
+
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(255, 0, 0);
+  font-weight: bolder;
+  
+}
+
+.caption-box{
+ 
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.events-heading{
+  font-size: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: hsl(0, 95%, 58%);
+ text-decoration-line:underline;
+
+}
+
+
+/* -----------event --cards--------*/
+
+.event-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 70px; /* Spacing between cards */
+  justify-content: center; /* Center cards */
+  padding: 20px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  width: calc(30% - 70px); /* 4 cards per row (25% width) minus gap */
+  min-width: 200px; /* Ensures cards don't shrink too much */
+}
+
+.event-left-image img {
+  width: 130px;
+  height: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.event-right-paragraph {
+  flex: 1;
+  font-size: 10px;
+  color: #333;
+}
+
+/* Responsive Media Queries */
+
+/* 3 cards per row on medium screens */
+@media screen and (max-width: 992px) {
+  .event-card {
+      width: calc(33.33% - 20px); /* 3 cards per row */
+  }
+}
+
+/* 2 cards per row on smaller screens */
+@media screen and (max-width: 768px) {
+  .event-card {
+      width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+/* 1 card per row on extra-small screens */
+@media screen and (max-width: 480px) {
+  .event-card {
+      width: 100%; /* 1 card per row */
+  }
+}
+
+
+/*---messMenu-------------------*/
+.messmenu-container {
+  display: flex; /* Use Flexbox to align items in a row */
+  justify-content: space-between; /* Ensure even spacing between elements */
+  align-items: center; /* Vertically center the images */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  width: 100%; /* Make container responsive */
+  max-width: 1390px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.messMenu-img, .foodchef-img {
+  height: auto; /* Maintain the aspect ratio */
+  display: flex; /* Center content inside */
+  justify-content: center;
+  align-items: center;
+}
+
+.messMenu-img {
+  width: 60%; /* Occupies 60% of the container's width */
+ 
+  padding-left: 30px;
+}
+
+.foodchef-img {
+  width: 40%; /* Occupies 40% of the container's width */
+}
+
+.messMenu-img img, .foodchef-img img {
+  width: 100%; /* Images will shrink or grow to fit their container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible within the container */
+}
+
+
+
+
+
+.messMenu-heading{
+  padding-left: 40px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #f02f2f;
+}
+
+.messMenu-caption{
+  padding-left: 40px;
+  padding-bottom: 30px;
+  color: gray;
+}
+
+

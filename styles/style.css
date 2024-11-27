@@ -1,0 +1,403 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fbf6f6;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #087fa3; /* University-themed color */
+  color: #ffffff;
+}
+
+.logo a {
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-decoration: none;
+  animation: color-change 3s linear infinite;
+  
+  
+}
+@keyframes color-change {
+  0% {
+    color: #ffffff; /* Starting color */
+  }
+  40% {
+    color: #ffffff; /* Midway color */
+  }
+  66% {
+    color: #ffffff; /* Another transition color */
+  }
+  100% {
+    color: #ffffff; /* Final color */
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFA726; /* Hover effect color */
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #ffffff;
+  margin: 4px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide nav-links initially on mobile */
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #00457C;
+      border-radius: 8px;
+      width: 200px;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .nav-links li {
+      margin: 15px 0;
+  }
+
+  .hamburger {
+      display: flex; /* Show hamburger icon on mobile */
+      
+  }
+
+  /* Show nav-links when active */
+  .nav-links.active {
+      display: flex;
+      z-index: 2;
+  }
+}
+
+
+
+
+/* --------------------BODY------------------------- */
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  height: 300px; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../data/Songs\ for\ late\ night\ driving\ \(1\).png'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  filter: blur(px); /* Apply blur effect to background */
+  z-index: -1; /* Place behind text and button */
+}
+
+.hero h1 {
+  font-size: 5rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin: 0;
+  /* color: #dc2828; */
+  color: rgb(255, 255, 255);
+  
+  z-index: 1; /* Ensure text is above the background */
+
+  animation: color-changer 3s linear infinite;
+}
+
+
+
+  
+  
+
+@keyframes color-changer {
+  0% {
+    color: #ffffff; /* Starting color */
+  }
+  40% {
+    color: #f4ed87; /* Midway color */
+  }
+  66% {
+    color: #7eec74; /* Another transition color */
+  }
+  100% {
+    color: #f3e8ae; /* Final color */
+  }
+}
+
+.explore-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #bd31d6;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  z-index: 1; /* Ensure button is above the background */
+}
+
+.explore-button:hover {
+  background-color: #ff8a50; 
+}
+
+
+/* ------------------------*/
+.caption{
+  
+    text-align: center;
+    
+
+}
+
+
+.caption h2{
+  
+  color: #fe0e0e;
+   /* Sets a coral color */
+    font-size: 2.3rem; /* Adjusts the font size */
+    font-family: 'Arial', sans-serif; /* Chooses the font */
+    font-weight: 700; /* Makes the font bold */
+    text-align: center; /* Centers the text horizontally */
+    margin: 20px 0; /* Adds spacing above and below */
+}
+
+
+/*--------cards-------------------------------------------------------------*/
+
+
+/* Base Styles */
+.cards {
+  display: flex; /* Arrange boxes in a row */
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+
+ 
+}
+
+.main-box {
+  display: flex;
+  justify-content: space-between;
+   /* Stack inner divs vertically within each main-box */
+  width: 30%; /* Each box takes roughly a third of the container width */
+  padding: 15px;
+  margin: 10px;
+  background-color: #f9f2f2;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.404);
+  border-radius: 8px;
+}
+
+.main-box:hover {
+  display: flex;
+  justify-content: space-between;
+   /* Stack inner divs vertically within each main-box */
+  width: 30%; /* Each box takes roughly a third of the container width */
+  padding: 15px;
+  margin: 10px;
+  background-color: #deece6;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.877);
+  border-radius: 8px;
+}
+
+.inner1 {
+  padding-bottom: 10px;
+  
+  
+}
+
+.inner2 {
+  padding-top: 15px;
+
+ 
+}
+
+.inner1 h4 {
+  padding-bottom: 10px;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.inner1 p {
+  font-size: larger;
+  font-weight: 900;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .main-box {
+    width: 45%; /* Take up more space on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    flex-direction: column; /* Stack main boxes vertically */
+    align-items: center;
+  }
+
+  .main-box {
+    width: 90%; /* Full width on very small screens */
+    margin: 10px 0;
+  }
+}
+
+
+
+/*----------------------------------------------------*/
+.about-us-ranked{
+  padding: 5px;
+  padding-left: 15px;
+  margin-top: 80px;
+  
+}
+
+.about-us-ranked p{
+  color: gray;
+   font-size:large;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.about-us-ranked h3{
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size:xx-large;
+  color: #fe0e0e;
+}
+
+/*------------------------------------------------*/
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Box Styles */
+.box {
+  flex: 1;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.box:hover {
+  flex: 1;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.895);
+  border-radius: 10px;
+  background-color: #f1eaea;
+  overflow: hidden;
+}
+
+/* Image Box */
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Text Box */
+.text-box {
+  padding: 20px;
+  color: rgb(90, 87, 87);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------FOOTER-------------------*/
+footer{
+  
+  height: 300px;
+  border:  0.5px solid gray;
+}
